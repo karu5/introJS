@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <section>
+        <div class="card">
+            <div class="img-card"></div>
+            <h6>Laptop Gamer AMD</h6>
+            <P>
+                Precio base: $
+                <span id="precio-inicial">400000</span>
+            </P>
+            <p>
+                Cantidad:
+                <span class="cantidad">0</span>
+
+                <button onclick="   /*  Aquí le pido que sume    */
+                cantidad = cantidad + 1;
+                valorTotal = cantidad * precioInicial;
+                document.querySelector('.cantidad').innerHTML = cantidad;
+                document.querySelector('.valor-total').innerHTML = valorTotal;
+                ">+</button>
+
+                <button onclick="  /*   Aquí le pido que el mínimo sea cero   */
+                if (cantidad <= 0) {
+                    return;
+                } 
+                else {   /*    Aquí le pido que reste   */
+                    cantidad = cantidad - 1;
+                    valorTotal = cantidad * precioInicial;
+                    document.querySelector('.valor-total').innerHTML = valorTotal;
+                    document.querySelector('.cantidad').innerHTML = cantidad;
+                }
+                ">-</button>
+            </p>
+        </div>
+    </section>
+    <div class="total-section">
+        <p>
+            Total a pagar: $
+            <span class="valor-total">0</span>
+        </p>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
